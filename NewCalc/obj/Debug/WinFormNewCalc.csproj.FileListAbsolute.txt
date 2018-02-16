@@ -1,0 +1,9 @@
+D:\Learn\NewCalc\NewCalc\bin\Debug\NewCalc.exe.config
+D:\Learn\NewCalc\NewCalc\bin\Debug\NewCalc.exe
+D:\Learn\NewCalc\NewCalc\bin\Debug\NewCalc.pdb
+D:\Learn\NewCalc\NewCalc\obj\Debug\WinFormNewCalc.csprojResolveAssemblyReference.cache
+D:\Learn\NewCalc\NewCalc\obj\Debug\NewCalc.Form1.resources
+D:\Learn\NewCalc\NewCalc\obj\Debug\NewCalc.Properties.Resources.resources
+D:\Learn\NewCalc\NewCalc\obj\Debug\WinFormNewCalc.csproj.GenerateResource.Cache
+D:\Learn\NewCalc\NewCalc\obj\Debug\NewCalc.exe
+D:\Learn\NewCalc\NewCalc\obj\Debug\NewCalc.pdb
