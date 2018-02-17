@@ -1,4 +1,6 @@
-﻿using NewCalc.Interfaces;
+﻿using DataBase.Models;
+using DataBase.NHibernate.Repositories;
+using NewCalc.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +17,9 @@ namespace NewCalc
     public partial class Form1 : Form
     {
         private Calc calc;
-        //private IList<IOperation> operations { get; set; }
+
+        private NHBaseRepository Repository = new NHBaseRepository();
+
         public Form1()
         {
             InitializeComponent();
@@ -40,6 +44,12 @@ namespace NewCalc
             cbOperation.Items.AddRange(calc.GetOperationsName());
             cbOperation.Text = cbOperation.Items[0].ToString();
 
+            var history = Repository.GetAll();
+            foreach (var historyItem in history)
+            {
+                tbHistory.AppendText($"{historyItem.NameOperation}({historyItem.Args}) = {historyItem.Result} | {historyItem.Time}\r\n");
+            }
+
         }
 
         private void btExec_Click(object sender, EventArgs e)
@@ -57,16 +67,23 @@ namespace NewCalc
             var result = calc.Exec(cbOperation.Text, args.ToArray());
 
             tbResult.Text = result.ToString();
-            //var oper = operations.FirstOrDefault(o => o.Name == cbOperation.Text);
-            //if (oper != null)
-            //{
-            //    var result = oper.Exec(args.ToArray());
-            //    tbResult.Text = result.ToString();
-            //}
-            //else
-            //{
-            //    tbResult.Text = "Выберите операцию";
-            //}
+
+            HistoryItem item = new HistoryItem();
+            item.Args = str;
+            item.NameOperation = cbOperation.Text;
+            item.Time = DateTime.Now;
+            item.Result = (float?)result;
+
+            Repository.Add(item);
+
+            //получаем из базы историю
+            var history = Repository.GetAll();
+            tbHistory.Clear();
+            foreach (var historyItem in history)
+            {
+                tbHistory.AppendText($"{historyItem.NameOperation}({historyItem.Args}) = {historyItem.Result} | {historyItem.Time}\r\n");
+            }
+
         }
 
         private void tbArgs_KeyUp(object sender, KeyEventArgs e)

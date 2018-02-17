@@ -14,7 +14,7 @@ namespace NewCalc.Interfaces
     }
     public interface ISuperOperation : IOperation
     {
-        string Owner { get; set; }
-        DateTime DateCreate { get; set; }
+        string Owner { get; }
+        DateTime DateCreate { get; }
     }
 }

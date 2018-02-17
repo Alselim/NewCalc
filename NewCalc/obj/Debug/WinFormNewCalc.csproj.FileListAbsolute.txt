@@ -7,3 +7,12 @@ D:\Learn\NewCalc\NewCalc\obj\Debug\NewCalc.Properties.Resources.resources
 D:\Learn\NewCalc\NewCalc\obj\Debug\WinFormNewCalc.csproj.GenerateResource.Cache
 D:\Learn\NewCalc\NewCalc\obj\Debug\NewCalc.exe
 D:\Learn\NewCalc\NewCalc\obj\Debug\NewCalc.pdb
+D:\Learn\NewCalc\NewCalc\bin\Debug\App_Data\CalcDB.mdf
+D:\Learn\NewCalc\NewCalc\bin\Debug\App_Data\CalcDB_log.ldf
+D:\Learn\NewCalc\NewCalc\bin\Debug\DataBase.dll
+D:\Learn\NewCalc\NewCalc\bin\Debug\NHibernate.dll
+D:\Learn\NewCalc\NewCalc\bin\Debug\Iesi.Collections.dll
+D:\Learn\NewCalc\NewCalc\bin\Debug\DataBase.pdb
+D:\Learn\NewCalc\NewCalc\bin\Debug\NHibernate.xml
+D:\Learn\NewCalc\NewCalc\bin\Debug\Iesi.Collections.xml
+D:\Learn\NewCalc\NewCalc\bin\Debug\hibernate.cfg.xml

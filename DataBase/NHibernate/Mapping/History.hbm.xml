@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="DataBase"
+                   namespace="DataBase.Models">
+
+  <class name="HistoryItem" table ="[History]">
+    <id name="Id">
+      <generator class="identity" />
+    </id>
+    <property name="NameOperation" />
+    <property name="Args" />
+    <property name="Time" />
+    <property name="Result" />
+
+  </class>
+
+</hibernate-mapping>
